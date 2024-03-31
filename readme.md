@@ -16,10 +16,10 @@ Las acciones dependen de algunas variables que tendremos que configurar para que
 
 `[url-repositorio]/settings/variables/actions/new`
 
-| Name                 | Value |
-| -------------------- | ----- |
-| `ACTIONS_RUNNER_DEBUG` | `true` |
-| `ACTIONS_STEP_DEBUG`   | `true` |
+| Name                 | Value | Descripcion |
+| -------------------- | ----- |-------------|
+| `ACTIONS_RUNNER_DEBUG` | `true` |Contain information about how a runner is executing a job|
+| `ACTIONS_STEP_DEBUG`   | `true` |Step debug logging increases the verbosity of a job's logs during and after a job's execution|
 
 ## 📁 Estructura del Proyecto
 
@@ -38,7 +38,7 @@ Este workflow muestra dos pasos que se ejecutan en paralelo
 
 > 2.  `parallel-job-macos`
 
-## 2️⃣ events.yaml
+## 2️⃣ 02-workflow-commands.yaml
 
 ## 3️⃣ simple-action.yaml
 
