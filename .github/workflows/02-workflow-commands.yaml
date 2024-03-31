@@ -5,23 +5,29 @@ jobs:
     testing-wf-commands:
         runs-on: ubuntu-latest
         steps:
-            - name: Setting an error message
+            - name: Setting an error message #ERROR!
               run: echo "::error::Missing semicolon" # This will set the error message to "Missing semicolon"
-            - name: Setting an error message with parameters
+
+            - name: Setting an error message with parameters #ERROR con informacion de linea, columna, mensaje
               run: echo "::error title=Error de sintaxis,file=app.js,line=10,endLine=10,col=20,endColumn=25::Falta un punto y coma" # This will set the error message to "Missing semicolon" with the title "Error title" and the file, line, and endLine parameters
-            - name: Setting an debug message with parameters
+            
+            - name: Setting an debug message with parameters #ERROR con informacion de linea, columna, mensaje
               run: echo "::debug title=Debug,file=app.js,line=10,endLine=10,col=20,endColumn=25::Falta un punto y coma"
-            - name: Setting an warning message with parameters
+
+            - name: Setting an warning message with parameters #WARNING
               run: echo "::warning title=Warnig,file=app.js,line=10,endLine=10,col=20,endColumn=25::Falta un punto y coma"
-            - name: Setting an notice message with parameters
+
+            - name: Setting an notice message with parameters #INFORMACION
               run: echo "::notice title=Notice,file=app.js,line=10,endLine=10,col=20,endColumn=25::Falta un punto y coma"
-            - name: Grouping output
+
+            - name: Grouping output  #AGRUPACION DE MENSAJES
               run: |
-                   echo "::group::My Group Title"
-                   echo "Inside the group 1"
-                   echo "Inside the group 2"
-                   echo "::endgroup::"
-            - name: Masking a value
+                  echo "::group::My Group Title"
+                  echo "Inside the group 1"
+                  echo "Inside the group 2"
+                  echo "::endgroup::"
+                  
+            - name: Masking a value #ENMASCARAR UN VALOR reemplaza cada caracter con un aserisco
               run: echo "::add-mask::my_secret_value" # This will mask the value "my_secret_value"
             - name: Echo a secret
               run: echo "my_secret_value" # This will echo the value "my_secret_value"           
