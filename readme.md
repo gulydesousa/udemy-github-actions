@@ -11,21 +11,27 @@ Qué cosas necesitas para instalar el software y cómo instalarlas.
 ```
 ```
 
-### Instalación
-Una serie de ejemplos paso a paso que te dicen cómo hacer funcionar un entorno de desarrollo.
+## 🔧 Instalación
+Las acciones dependen de algunas variables que tendremos que configurar para que el comportamiento sea el esperado
 
+`[url-repositorio]/settings/variables/actions/new`
+
+| Name                 | Value |
+| -------------------- | ----- |
+| `ACTIONS_RUNNER_DEBUG` | `true` |
+| `ACTIONS_STEP_DEBUG`   | `true` |
 
 ## 📁 Estructura del Proyecto
 
 
-
-## 🔧 Ejecución de las pruebas
+##  Ejecución de las pruebas
 
 Este proyecto incluye varios archivos de configuración de GitHub Actions que demuestran distintos aspectos y capacidades de las GitHub Actions y Workflows. 
 
 A continuación se detalla la función y características principales de cada archivo YAML proporcionado:
 
-## 1️⃣ 01-first-workflow.yaml
+## 🚫 01-first-workflow.yaml 
+### Deshabilitado manualmente
 Este workflow muestra dos pasos que se ejecutan en paralelo
 
 > 1.  `run-shell-command` -> `dependant-job` *(se ejecuta a solo cuando termina run-shell-command)*
