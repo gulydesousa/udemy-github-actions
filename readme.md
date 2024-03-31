@@ -47,9 +47,11 @@ Ejecuta un único paso en el que se muestran los resultados en diferentes format
 
 ## 🚫 03-working-dir-and-shells.yaml
 
+Este workflow muestra dos pasos que se ejecutan en secuencia
 
+> 1.  `display-wd-info` *comandos y variables ubuntu-latest*
 
-
+> 2.  `display-wd-info-windows` *comandos y variables windows-latest*
 
 
 ## 3️⃣ simple-action.yaml
