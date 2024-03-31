@@ -26,7 +26,7 @@ jobs:
                     echo "Nombre del repo: $GITHUB_REPOSITORY"
                     echo "Directorio del workspace: $GITHUB_WORKSPACE"
             - name: Change Working Directory
-              working-directory:   /home/runner/work/github-actions
+              working-directory:   /home/runner/work/udemy-github-actions
               run: |
                   echo "Current Working Directory:"
                   pwd
