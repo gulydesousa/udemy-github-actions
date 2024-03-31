@@ -65,9 +65,21 @@ Se establece el shell por defecto para todo el workflow y para cada step
 > 2.  `display-wd-info-windows` *comandos y variables windows-latest / python*
 
 
+## 🚫 05-simple-action.yaml
+
+Este workflow llama un `Action` entre sus steps, los `Action` ejecutan tareas mas complejas que solo ejecutar un comando como en los ejemplos anteriores.
+
+Un `Action` es una unidad de codigo reutilizable que referenciamos en nuestros steps.
+
+*Colocamos la ruta del action que queremos ejecutar y despues del @ ponemos la rama, tag o commit que queremos ejecutar, la version (tag)*
 
 
-## 4️⃣ workflow-commands.yaml
+
+
+
+
+
+
 
 ## 5️⃣ working-dir-and-shells.yaml
 
