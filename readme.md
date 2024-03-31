@@ -71,6 +71,8 @@ Este workflow llama un `Action` entre sus steps, los `Action` ejecutan tareas ma
 
 Un `Action` es una unidad de codigo reutilizable que referenciamos en nuestros steps.
 
+En este caso usamos `actions/hello-world-javascript-action@v1` que está deprecated, de ahí que nos salgan algunos warnings en la ejecución del workflow. 
+
 *Colocamos la ruta del action que queremos ejecutar y despues del @ ponemos la rama, tag o commit que queremos ejecutar, la version (tag)*
 
 

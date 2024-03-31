@@ -9,7 +9,7 @@ jobs:
           id: hello
         #colocamos la ruta del action que queremos ejecutar y..
         #despues del @ ponemos la rama, tag o commit que queremos ejecutar, la version (tag)
-          uses: actions/hello-world-javascript-action@v1 #https://github.com/actions/hello-world-javascript-action
+          uses: actions/hello-world-javascript-action@v1.1 #https://github.com/actions/hello-world-javascript-action
           with:
             who-to-greet: 'Mona the Octocat'
         #Si el action tiene outputs, podemos acceder a ellos con steps.<id>.outputs.<nombre del output>
