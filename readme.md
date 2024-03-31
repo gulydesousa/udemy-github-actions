@@ -5,11 +5,6 @@ Un proyecto práctico de GitHub Actions y Workflows diseñado para explorar y do
 ## 🚀 Empezando
 Estas instrucciones te ayudarán a configurar tu proyecto y a ejecutarlo en tu máquina local para propósitos de desarrollo y pruebas. Ve a la sección Instalación para saber cómo desplegar el proyecto.
 
-### Prerrequisitos
-Qué cosas necesitas para instalar el software y cómo instalarlas.
-
-```
-```
 
 ## 🔧 Instalación
 Las acciones dependen de algunas variables que tendremos que configurar para que el comportamiento sea el esperado
@@ -21,12 +16,13 @@ Las acciones dependen de algunas variables que tendremos que configurar para que
 | `ACTIONS_RUNNER_DEBUG` | `true` |Contain information about how a runner is executing a job|
 | `ACTIONS_STEP_DEBUG`   | `true` |Step debug logging increases the verbosity of a job's logs during and after a job's execution|
 
-## 📁 Estructura del Proyecto
+## 📁 .github/workflows
 
+Los workflows están en el directorio `.github/workflows`. 
 
-##  Ejecución de las pruebas
+Se incluyen varios archivos de configuración de GitHub Actions que demuestran distintos aspectos y capacidades de las GitHub Actions y Workflows. 
 
-Este proyecto incluye varios archivos de configuración de GitHub Actions que demuestran distintos aspectos y capacidades de las GitHub Actions y Workflows. 
+*Los workflows están desabilitados manualmente, tendrás que habilitarlos para poder probar.*
 
 A continuación se detalla la función y características principales de cada archivo YAML proporcionado:
 
@@ -38,7 +34,23 @@ Este workflow muestra dos pasos que se ejecutan en paralelo
 
 > 2.  `parallel-job-macos`
 
-## 2️⃣ 02-workflow-commands.yaml
+
+## 🚫 02-workflow-commands.yaml
+Ejecuta un único paso en el que se muestran los resultados en diferentes formatos: 
+- Error
+- Warning
+- Notice
+- Agrupación de los mensajes
+
+> `testing-wf-commands`
+
+
+## 🚫 03-working-dir-and-shells.yaml
+
+
+
+
+
 
 ## 3️⃣ simple-action.yaml
 
