@@ -1,0 +1,55 @@
+name: Working Dirs & Shells (using bash & pwsh)
+on: [push]
+defaults: 
+  run:
+    shell: bash #para que todos los trabajos se ejecuten en bash
+jobs:
+    display-wd-info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display Current Working Directory
+              run: |
+                  echo "Current Working Directory: $PWD" 
+            - name: Display Shell
+              run: |
+                  echo "Current Shell: $SHELL" 
+            - name: Display Environment Variables
+              run: |
+                  env | sort 
+            - name: Display Working Directory & List Files
+              run: |
+                    echo "Current Working Directory:"
+                    pwd   
+                    echo "List of files in the current directory:"   
+                    ls -a   
+                    echo "Comit SHA (hash del commit): $GITHUB_SHA"  
+                    echo "Nombre del repo: $GITHUB_REPOSITORY"
+                    echo "Directorio del workspace: $GITHUB_WORKSPACE"
+            - name: Change Working Directory
+              working-directory:   /home/runner/work/github-actions
+              run: |
+                  echo "Current Working Directory:"
+                  pwd
+                  echo "Current Working Directory: $PWD" 
+                  echo "List of files in the current directory:"   
+                  ls -a        
+    display-wd-info-windows:
+        runs-on: windows-latest
+        defaults: 
+            run:
+              shell: pwsh #para que todos los trabajos se ejecuten en powershell, sobreescribe el shell por defecto que es "bash"
+        steps:           
+            - name: Display Working Directory & List Files
+              run: |
+                    echo "Current Working Directory:"
+                    Get-Location   
+                    echo "List of files in the current directory:"   
+                    dir
+                    echo "Comit SHA (hash del commit): $env:GITHUB_SHA"  
+                    echo "Nombre del repo: $env:GITHUB_REPOSITORY"
+                    echo "Directorio del workspace: $env:GITHUB_WORKSPACE"
+            - name: Python Shell
+              shell: python #para que este paso se ejecute en python
+              run: |
+                  import platform
+                  print(platform.processor())
