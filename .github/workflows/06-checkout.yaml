@@ -1,7 +1,7 @@
 name: 06-Checkout
 on: [push]
 
-
+#On PUSH
 jobs: 
   checkout-action: #CHECKOUT con un ACTION (un solo paso)
     runs-on: ubuntu-latest
