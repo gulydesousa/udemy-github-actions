@@ -10,7 +10,7 @@ jobs:
             - name: Display Current Working Directory
               run: |
                   echo "Current Working Directory: $PWD" 
-
+                  
             - name: Display Shell
               run: |
                   echo "Current Shell: $SHELL" 
@@ -30,7 +30,7 @@ jobs:
                     echo "Directorio del workspace: $GITHUB_WORKSPACE"
 
             - name: Change Working Directory
-              working-directory:   /home/runner/work/udemy-github-actions
+              working-directory:   ${{ github.workspace }}
               run: |
                   echo "Current Working Directory:"
                   pwd

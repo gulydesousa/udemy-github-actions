@@ -1,4 +1,4 @@
-name: Repository Events
+name: 07-Repository Events
 on: [push, pull_request, issues]
 
 jobs: 

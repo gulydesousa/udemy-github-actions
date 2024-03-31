@@ -85,34 +85,11 @@ En este ejemplo hacemos el **Checkout** de dos formas:
 > 2.  `checkout-and-display-files` *En este paso el checkout se hace de manera "Manual".*
 
 
+## 🚫 07-events.yaml
 
+Este workflow se dispara en tres eventos: `push, pull_request, issues`
 
-
-
-
-
-
-
-Descripción: Configura workflows que se activan en respuesta a eventos específicos del repositorio como push, pull_request, e issues.
-Utilidad: Muestra cómo utilizar distintos eventos para activar workflows, lo que es fundamental para automatizar tareas en respuesta a acciones comunes en el desarrollo de software.
-first-workflow.yaml
-Descripción: Define el primer workflow básico, probablemente introduciendo conceptos esenciales de GitHub Actions, como la especificación de eventos de activación y trabajos.
-Utilidad: Sirve como una introducción práctica a la creación de workflows, ideal para quienes están empezando con la automatización de CI/CD.
-simple-action.yaml
-Descripción: Implementa una acción simple, posiblemente enfocada en una tarea específica dentro del ciclo de CI/CD.
-Utilidad: Ejemplifica la creación y configuración de una acción personalizada en GitHub, demostrando cómo pequeños scripts o automatizaciones pueden integrarse en flujos de trabajo más grandes.
-workflow-commands.yaml
-Descripción: Utiliza comandos específicos de workflows para manipular el flujo de trabajo, como establecer variables de entorno, escribir datos de salida, y más.
-Utilidad: Ofrece una visión avanzada sobre cómo los comandos pueden controlar el flujo de trabajo, permitiendo una mayor personalización y flexibilidad en la automatización.
-working-dir-and-shells.yaml & working-dir-and-using-default-shell.yaml
-Descripción: Estos archivos configuran el directorio de trabajo para los trabajos y ajustan el shell utilizado para ejecutar comandos o scripts.
-Utilidad: Destacan la importancia de la configuración del entorno de ejecución, incluyendo la selección del directorio de trabajo y la personalización del shell, para adaptarse a diferentes necesidades de desarrollo.
-checkout.yaml
-Descripción: Define un workflow que utiliza la acción checkout para clonar el repositorio y trabajar con el código fuente.
-Utilidad: Demuestra cómo preparar el entorno de trabajo para los jobs de un workflow, un paso esencial para la mayoría de las tareas de CI/CD que requieren acceso al código del proyecto.
-Cada uno de estos archivos configura aspectos específicos de los workflows de GitHub Actions, desde la respuesta a eventos del repositorio hasta la configuración detallada del entorno de ejecución. Son ejemplos prácticos ideales para aquellos que buscan entender y aplicar las GitHub Actions en sus proyectos de desarrollo de software.
-
-## 🛠️ Construido con
+> `checkout-test` *Hace el checkout por medio de un **Action**.*
 
 
 ## 🎁 Expresiones de Gratitud
