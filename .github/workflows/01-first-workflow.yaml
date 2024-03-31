@@ -18,6 +18,7 @@ jobs:
         steps:
             - name: View SW Version
               run: sw_vers  
+                  doesnotexistss #Error intencionalmente generado
 
     dependant-job:
         needs: [run-shell-command]
@@ -26,4 +27,4 @@ jobs:
             - name: Echo a string
               run: Write-OutPut "Windows Job is running"
             - name: Error Step
-              run: doesnotexistss
+              run: doesnotexistss #Error intencionalmente generado
