@@ -18,7 +18,6 @@ jobs:
         steps:
             - name: View SW Version
               run: sw_vers  
-                  doesnotexistss #Error intencionalmente generado
 
     dependant-job:
         needs: [run-shell-command]
