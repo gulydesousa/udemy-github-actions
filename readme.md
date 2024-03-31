@@ -54,7 +54,18 @@ Este workflow muestra dos pasos que se ejecutan en secuencia
 > 2.  `display-wd-info-windows` *comandos y variables windows-latest*
 
 
-## 3️⃣ simple-action.yaml
+
+## 🚫 04-working-dir-and-using-default-shell.yaml 
+
+Similar al anterior, este workflow muestra dos pasos que se ejecutan en secuencia.
+Se establece el shell por defecto para todo el workflow y para cada step
+
+> 1.  `display-wd-info` *comandos y variables ubuntu-latest*
+
+> 2.  `display-wd-info-windows` *comandos y variables windows-latest / python*
+
+
+
 
 ## 4️⃣ workflow-commands.yaml
 
