@@ -1,9 +1,9 @@
-name: Checkout
+name: 06-Checkout
 on: [push]
 
 
 jobs: 
-  checkout-action:
+  checkout-action: #CHECKOUT con un ACTION (un solo paso)
     runs-on: ubuntu-latest
     steps:
         - name: List files before checkout
@@ -14,11 +14,12 @@ jobs:
         - name: List files after checkout
           run: ls -a
   
-  checkout-and-display-files:
+  checkout-and-display-files: #CHECKOUT donde nostros indicamos cada uno de los comandos
         runs-on: ubuntu-latest
         steps:
             - name: List files before checkout
               run: ls -a
+
             - name: Checkout repository
               run: |
                 git init
@@ -27,5 +28,6 @@ jobs:
                 git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
                 git fetch origin
                 git checkout master
+
             - name: List files after checkout
               run: ls -a

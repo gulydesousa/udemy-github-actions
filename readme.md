@@ -76,6 +76,13 @@ En este caso usamos `actions/hello-world-javascript-action@v1` que está depreca
 *Colocamos la ruta del action que queremos ejecutar y despues del @ ponemos la rama, tag o commit que queremos ejecutar, la version (tag)*
 
 
+## 🚫 06-checkout.yaml
+
+En este ejemplo hacemos el **Checkout** de dos formas:
+
+> 1.  `checkout-action` *Hace el checkout por medio de un **Action**.*
+
+> 2.  `checkout-and-display-files` *En este paso el checkout se hace de manera "Manual".*
 
 
 
@@ -83,11 +90,9 @@ En este caso usamos `actions/hello-world-javascript-action@v1` que está depreca
 
 
 
-## 5️⃣ working-dir-and-shells.yaml
 
-## 6️⃣ working-dir-and-using-default-shell.yaml
 
-##  7️⃣ checkout.yaml
+
 Descripción: Configura workflows que se activan en respuesta a eventos específicos del repositorio como push, pull_request, e issues.
 Utilidad: Muestra cómo utilizar distintos eventos para activar workflows, lo que es fundamental para automatizar tareas en respuesta a acciones comunes en el desarrollo de software.
 first-workflow.yaml
