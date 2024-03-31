@@ -26,4 +26,5 @@ jobs:
             - name: Echo a string
               run: Write-OutPut "Windows Job is running"
             - name: Error Step
-              run: doesnotexistss #Error intencionalmente generado
+              #run: doesnotexistss #Error intencionalmente generado
+              run: echo "Ejecución depende de run-shell-command"

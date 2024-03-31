@@ -27,8 +27,10 @@ A continuación se detalla la función y características principales de cada ar
 
 ## 1️⃣ 01-first-workflow.yaml
 Este workflow muestra dos pasos que se ejecutan en paralelo
-- run-shell-command -> dependant-job **(se ejecuta a solo cuando termina run-shell-command)**
-- parallel-job-macos
+
+> 1.  `run-shell-command` -> `dependant-job` *(se ejecuta a solo cuando termina run-shell-command)*
+
+> 2.  `parallel-job-macos`
 
 ## 2️⃣ events.yaml
 
