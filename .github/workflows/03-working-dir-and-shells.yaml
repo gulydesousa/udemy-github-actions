@@ -1,4 +1,4 @@
-name: Working Dirs & Shells
+name: 03-Working Dirs & Shells
 on: [push]
 jobs:
     display-wd-info:
