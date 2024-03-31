@@ -1,5 +1,5 @@
 #First Workflow
-name: First Workflow
+name: 01-First Workflow
 on: [push]
 
 jobs:
