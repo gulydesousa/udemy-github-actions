@@ -1,4 +1,4 @@
-name: "Custom QL Workflow"
+name: "00-Custom QL Workflow"
 
 on:
   workflow_dispatch:
