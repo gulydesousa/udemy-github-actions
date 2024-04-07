@@ -35,7 +35,7 @@ jobs:
     #La compilación debe hacerse despues del init y antes de analyze
     - name: Build
       run: |
-        dotnet build ./csharp.sln
+        dotnet build ./codecheck.csproj
     - name: Perform CodeQL Analysis
     #****************************************************************
 
