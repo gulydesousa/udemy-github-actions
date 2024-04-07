@@ -149,7 +149,7 @@
             return $"Procesado_{moneda}";
         }
 
- 
+
 
         // Simula un proceso ineficiente para manejar las notas
         private static string ProcesoIneficienteDeNotas(string notas)
@@ -199,6 +199,48 @@
             Console.WriteLine("Contraseña: " + password);
             Console.WriteLine("Consulta SQL: " + query);
             Console.WriteLine("Input: " + input);
+        }
+
+        // Método que recibe un arreglo
+        public static void ReceiveArray(int[] array)
+        {
+            foreach (var item in array)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        // Método que recibe una lista
+        public static void ReceiveList(List<string> list)
+        {
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        // Método que recibe un arreglo y un string
+        public static void ReceiveArrayAndString(int[] array, string str)
+        {
+            Console.WriteLine("String: " + str);
+            foreach (var item in array)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public void VulnerableMethod(string userInput)
+        {
+            string query = "SELECT * FROM users WHERE name = '" + userInput + "';";
+
+            // Ejecutar la consulta...
+        }
+
+        public void VulnerableXSSMethod(string userInput)
+        {
+            string htmlContent = "<div>" + userInput + "</div>";
+
+            // Renderizar el contenido HTML...
         }
     }
 
