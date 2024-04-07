@@ -33,3 +33,11 @@ function processUserData(data) {
 
     console.log('Resultado de la operación: ' + result);
 }
+
+
+function showMessage(message) {
+    var div = document.createElement('div');
+    div.innerHTML = message;
+    document.body.appendChild(div);
+}
+
