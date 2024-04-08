@@ -31,13 +31,10 @@ jobs:
         config-file: ./.github/codeql/codeql-config.yml
         debug: true
 
-    #****************************************************************
-    #La compilación debe hacerse despues del init y antes de analyze
     - name: Build
       run: |
         dotnet build ./codecheck.csproj
     - name: Perform CodeQL Analysis
-    #****************************************************************
 
       uses: github/codeql-action/analyze@v3
       with:
