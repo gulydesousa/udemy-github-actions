@@ -42,9 +42,7 @@ Este workflow ejecuta consultas codeQL personalizadas.
 ### Scripts personalizados
 > `qlpack.yml` es el fichero de configuración del pack de queries
 
-
-> [!WARNING]  
-> No olvides incluir la metadata en los ficheros **ql**.  Code Scanning usa esta información para mostrar los mensajes.
+> ⚠ No olvides incluir la metadata en los ficheros **ql**.  Code Scanning usa esta información para mostrar los mensajes.
 
 <pre>
 📦custom         
