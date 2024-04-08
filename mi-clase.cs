@@ -161,12 +161,12 @@
             }
             return notas;
         }
-
+/*
         public void MetodoEjemplo()
         {
             // Este bloque de código está vacío
         }
-
+*/
         static void CustomValidation()
         {
             // Crear una lista con elementos duplicados
