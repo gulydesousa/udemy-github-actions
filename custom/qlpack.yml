@@ -3,4 +3,5 @@ version: 0.0.0
 dependencies:
   # This uses the latest version of the codeql/csharp-all library.
   # You may want to change to a more precise semver string.
+  # Establecemos la librería que corresponde a las consultas en este directorio
   codeql/csharp-all: "*"

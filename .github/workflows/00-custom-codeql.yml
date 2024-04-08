@@ -28,6 +28,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
+        #Configuración de nuestros queries personalizados
         config-file: ./.github/codeql/codeql-config.yml
         debug: true
 

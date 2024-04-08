@@ -1,8 +1,12 @@
 name: "CodeQL config"
-disable-default-queries: true
+# Desabilitamos los queries por defecto
+disable-default-queries: true 
 queries: 
   - name: Run custom queries
-    uses: ./custom
+    # Directorio de nuestros queries personalizados
+    uses: ./custom  
+
+
 #query-filters:
 #  - include:
 #      precision:
