@@ -24,6 +24,9 @@ Estos archivos configuran distintos aspectos de GitHub Actions y demuestran su v
 > [!NOTE]
 > Los workflows están desactivados manualmente. Deberás habilitarlos para ejecutar las pruebas.
 
+# 📌 00-custom-codeql.yaml https://img.shields.io/badge/actions-codeql-blue
+
+
 
 
 ## 🚫 01-first-workflow.yaml 
