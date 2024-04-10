@@ -25,6 +25,7 @@ function redirect(redirectUrl) {
     window.location.href = redirectUrl;
 }
 
+//Ejemplo 5
 function processUserData(data) {
     var user = JSON.parse(data);
 
