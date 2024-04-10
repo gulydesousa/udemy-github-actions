@@ -8,7 +8,7 @@ on:
   pull_request: #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
     types: [opened, assigned, reopened, synchronize]
   issues: #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
-    types: [opened]
+    types: [opened, closed, reopened]
 
 jobs:
   checkout-test:
