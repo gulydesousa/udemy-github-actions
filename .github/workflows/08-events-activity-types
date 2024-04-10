@@ -1,0 +1,23 @@
+#Events con Activity types 
+#https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+
+name: 08-Events Activity Types
+
+on:
+  push: #	Not applicable 
+  pull_request: #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+    types: [opened, assigned, reopened, synchronize]
+  issues: #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
+    types: [opened]
+
+jobs:
+  checkout-test:
+    runs-on: ubuntu-latest
+    steps:
+    # Imprime el valor de las variables de entorno GITHUB_SHA y GITHUB_REF
+    - run: "echo $GITHUB_SHA  #Contiene el hash del commit \necho $GITHUB_REF  #Contiene la referencia del commit\n"
+    - uses: actions/checkout@v3
+
+      # Se encarga de clonar el repositorio en la máquina virtual
+
+#Podemos probar este caso al crear un pull request, asginar un pull request
