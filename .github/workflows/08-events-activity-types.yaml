@@ -15,9 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # Imprime el valor de las variables de entorno GITHUB_SHA y GITHUB_REF
-    - run: "echo $GITHUB_SHA  #Contiene el hash del commit \necho $GITHUB_REF  #Contiene la referencia del commit\n"
+    - run: |
+          echo $GITHUB_SHA  #Contiene el hash del commit
+          echo $GITHUB_REF  #Contiene la referencia del commit
+
+    # Se encarga de clonar el repositorio en la máquina virtual
     - uses: actions/checkout@v3
 
-      # Se encarga de clonar el repositorio en la máquina virtual
-
+      
 #Podemos probar este caso al crear un pull request, asginar un pull request
