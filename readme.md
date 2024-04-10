@@ -170,6 +170,15 @@ Realiza una acción de checkout y luego lista los archivos en el directorio de t
 </details>
 
 
+## 08-events-activity-types.yaml
+
+[Events that triggers workflow](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
+
+Este workflow se ejecuta en función en caso que se ejecute determinados tipos de **Activity types** 💥
+
+
+
+
 ## 🎁 Expresiones de Gratitud
 - Comenta a otros sobre este proyecto 📢
 - Da las gracias públicamente 🤓.

@@ -17,7 +17,7 @@ jobs:
     # Imprime el valor de las variables de entorno GITHUB_SHA(Hash) y GITHUB_REF (Referencia)
     - run: | #Contiene el hash del commit
           echo "Hash del commit: ${{ github.sha}}"  
-            echo "Referencia del commit: ${{ github.ref }}"
+          echo "Referencia del commit: ${{ github.ref }}"
 
     # Se encarga de clonar el repositorio en la máquina virtual
     - uses: actions/checkout@v3
