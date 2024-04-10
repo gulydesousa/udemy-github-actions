@@ -34,7 +34,7 @@ function processUserData(data) {
     console.log('Resultado de la operación: ' + result);
 }
 
-
+//Prueba
 function showMessage(message) {
     var div = document.createElement('div');
     div.innerHTML = message;
