@@ -1,10 +1,47 @@
 name: 12-Manually Triggered Actions
 on:
     #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#manual-events
+    # Disparar el workflow de manera manual
     workflow_dispatch: 
+        #se puede agregar un input para que el usuario pueda ingresar un mensaje
+        inputs:
+            stringInput:
+                description: 'String input para el log'
+                type: string
+                required: true
+                default: 'Valor por defecto'
+            number:
+                description: A number input
+                default: 4
+                type: number
+            option:
+                description: "An Options Input"
+                required: true
+                default: "Option 3"
+                type: choice
+                options:
+                    - Option 1
+                    - Option 2
+                    - Option 3
+            boolean:
+                description: A boolean option
+                required: false
+                type: boolean
+            environment:
+                description: "Environment"
+                type: environment
+                required: true    
  
 jobs:
     logInfo:
         runs-on: ubuntu-latest
         steps:
-            - run:  "echo \"Hash del commit: ${{ github.sha}}\"  \necho \"Referencia del commit: ${{ github.ref }}\"\n#magic___^_^___line\n"
+            - run:  |
+                echo "Hash del commit: ${{ github.sha}}"
+                echo "Referencia del commit: ${{ github.ref }}"
+                #magic___^_^___line
+                echo "String input: ${{ github.event.inputs.stringInput }}"
+                echo "Number input: ${{ github.event.inputs.number }}"
+                echo "Option input: ${{ github.event.inputs.option }}"
+                echo "Boolean input: ${{ github.event.inputs.boolean }}"
+                echo "Environment input: ${{ github.event.inputs.environment }}"
