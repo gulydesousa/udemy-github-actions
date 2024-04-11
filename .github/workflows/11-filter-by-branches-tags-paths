@@ -5,7 +5,7 @@ on:
   push:
 
     branches:
-    - main # matchea la rama main
+    - "main" # matchea la rama main
     - "feature/*" #matchea cualquier rama que comience con feature/featA, feature/featB no matchea feature/featA/featB
     - "feature/**" #matchea cualquier rama que comience con feature/: feature/featA, feature/featA/featB
     - "!feature/featA" # es equivalente a branches-ignore: feature/featA, solo que solo puede haber o branches-ignore o branches
