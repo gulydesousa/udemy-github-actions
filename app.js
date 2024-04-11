@@ -43,3 +43,4 @@ function showMessage(message) {
 }
 
 //************************
+alert('1');
