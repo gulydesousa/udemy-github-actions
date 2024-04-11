@@ -29,8 +29,8 @@ on:
                 type: boolean
             environment:
                 description: "Environment"
-                type: environment
-                required: true    
+                type: string
+                required: true
  
 jobs:
     logInfo:
