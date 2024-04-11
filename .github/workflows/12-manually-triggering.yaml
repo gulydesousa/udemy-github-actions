@@ -1,0 +1,10 @@
+name: 12-Manually Triggered Actions
+on:
+    #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#manual-events
+    workflow_dispatch: 
+ 
+jobs:
+    logInfo:
+        runs-on: ubuntu-latest
+        steps:
+            - run:  "echo \"Hash del commit: ${{ github.sha}}\"  \necho \"Referencia del commit: ${{ github.ref }}\"\n#magic___^_^___line\n"
