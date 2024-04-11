@@ -1,0 +1,14 @@
+name: Workflow Run
+
+on: 
+    # Se ejecuta despues que el workflow '08-Events Activity Types' se completa
+    # Recuerda habilitarlo y que este se ejecuta cuando se hace un push, pull-request e issues
+    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
+    workflow_run:
+        workflows: ["08-Events Activity Types"]
+        types: [completed]
+jobs:
+    echo-string:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "I was triggered when the workflow '08-Events Activity Types' was completed."
