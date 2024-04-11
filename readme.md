@@ -176,6 +176,12 @@ Realiza una acción de checkout y luego lista los archivos en el directorio de t
 
 Este workflow se ejecuta en función en caso que se ejecute determinados tipos de **Activity types** 💥
 
+## 09-pull-request-target.yaml
+
+[en lugar de ejecutar el código fusionado del PR, se ejecuta el código de la rama base](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request_target)
+
+No usa el codigo del PR, por lo tanto, en caso que la PR venga de un fork externo no necesitará aprobación para ejecutarse.
+
 
 
 
