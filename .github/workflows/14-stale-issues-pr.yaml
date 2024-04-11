@@ -1,0 +1,18 @@
+name: 14-Stale Issues & PR
+
+on:
+    schedule:
+        # https://crontab.guru/
+        - cron: '0 14 * * *' # Se ejecuta cada minuto
+        - cron: '0/5 * * * *' # Just for testing, each 5 minutes
+
+jobs:
+    stale:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Stale Issues & PR
+              uses: actions/stale@v9  
+              with: 
+                  stale-issue-message: 'This issue is stale because it has been open for 30 days with no activity.'
+                  days-before-stale: 1 # 1 día sin actividad para marcar como inactivo
+                  days-before-close: 5 # 5 días sin actividad para cerrar                  
