@@ -4,7 +4,7 @@ on:
     schedule:
         # https://crontab.guru/
         - cron: '0 14 * * *' # Se ejecuta cada minuto
-        - cron: '0/5 * * * *' # Just for testing, each 5 minutes
+        - cron: '* * * * *' # Just for testing, each 5 minutes
 
 jobs:
     stale:
