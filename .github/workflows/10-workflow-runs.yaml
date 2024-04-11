@@ -1,4 +1,4 @@
-name: Workflow Run
+name: 10-Workflow Run
 
 on: 
     # Se ejecuta despues que el workflow '08-Events Activity Types' se completa
