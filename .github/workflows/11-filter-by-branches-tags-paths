@@ -1,0 +1,47 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+name: 11-Filter BY Branches Tags and Paths
+
+on:
+  push:
+
+    branches:
+    - main # matchea la rama main
+    - "feature/*" #matchea cualquier rama que comience con feature/featA, feature/featB no matchea feature/featA/featB
+    - "feature/**" #matchea cualquier rama que comience con feature/: feature/featA, feature/featA/featB
+    - "!feature/featA" # es equivalente a branches-ignore: feature/featA, solo que solo puede haber o branches-ignore o branches
+    # branches-ignore: 
+    #   - feature/featA
+    tags:
+    - v1.* # matchea cualquier tag que comience con v1. v1.0, v1.1, v1.2
+
+    # Se dispara el workflow si se modifica un archivo que cumple los patrones especificados  
+    paths:
+    - '**.js' # matchea cualquier archivo que termine en .js
+    - '!app.js' # matchea cualquier archivo que no sea app.js
+    - 'src/**' # matchea cualquier archivo que esté dentro de la carpeta src
+
+  pull_request: #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+    types: [opened, assigned, reopened, synchronize]
+
+    branches:
+    - main
+
+    paths: #Disparamos el workflow si se modifica un archivo js, pero no si se modifica app.js
+    - '**.js'
+    - '!app.js'
+
+
+  issues: #https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#issues
+    types: [opened, closed, reopened]
+
+jobs:
+  checkout-test:
+    runs-on: ubuntu-latest
+    steps:
+    # Imprime el valor de las variables de entorno GITHUB_SHA(Hash) y GITHUB_REF (Referencia)
+    - run: "echo \"Hash del commit: ${{ github.sha}}\"  \necho \"Referencia del commit: ${{ github.ref }}\"\n#magic___^_^___line\n" #Contiene el hash del commit
+    - uses: actions/checkout@v3
+
+      # Se encarga de clonar el repositorio en la máquina virtual
+
+#Podemos probar este caso al crear un pull request, asginar un pull request
