@@ -182,7 +182,42 @@ Este workflow se ejecuta en función en caso que se ejecute determinados tipos d
 
 No usa el codigo del PR, por lo tanto, en caso que la PR venga de un fork externo no necesitará aprobación para ejecutarse.
 
+## 10-workflow-runs.yaml
 
+Se ejecuta un workflow dependiendo de la ejecución de otro.
+
+Es útil si queremos separar las acciones en dos workflows, uno para testing y otro para deploy, por ejemplo.
+
+**Se admiten hasta tres niveles de anidación**
+
+## 11-filter-by-branches-tags-paths.yaml
+
+Se dispara si ocurre la acción en determinada rama, tag, ficheros modificados.
+
+
+## 12-manually-triggering.yaml
+
+Ejecución manual con parametros.
+
+Ejecución por el cli
+
+```bash
+gh workflow run 12-manually-triggering.yaml -f stringInput="from gh cli" -f environment="prod" --ref main
+```
+
+> **Api REST**: Necesita un fine-grained personal access token
+
+## 13-external-event.yaml
+
+Eventos externos.
+
+>  Por ejemplo:  una aplicación que en base a determinada situación, se dispara el worokflow.
+
+## 14-stañe-issues-pr.yaml
+
+Se marca un issue como stale según un cronometro.
+
+> [Crontab.guru](https://crontab.guru/) - The cron schedule expression generator
 
 
 ## 🎁 Expresiones de Gratitud
