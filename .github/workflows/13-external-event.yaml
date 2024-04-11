@@ -1,0 +1,11 @@
+name: 13-External Event
+
+on: 
+    repository_dispatch:
+
+jobs:
+    echo-a-string:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                echo "Repository Dispatch Event"
