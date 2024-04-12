@@ -29,8 +29,11 @@ jobs:
              # Ejemplo de como se puede utilizar el contexto de GitHub Actions   
             - name: Contexts
               run: |
-                echo "11- toJson(github): ${{ toJson(github) }}"
-                echo "12- toJson(job): ${{ toJson(job) }}"
-                echo "13- toJson(steps): ${{ toJson(steps) }}"
-                echo "14- toJson(secrets): ${{ toJson(secrets) }}"
-                echo "15- toJson(runner): ${{ toJson(runner) }}"
+                echo "11- github.actor: ${{ github.actor }}"
+                echo "12- github.run_id: ${{ github.run_id }}"
+                echo "13- github.repository: ${{ github.repository }}"
+                echo "14- github.event_name: ${{ github.event_name }}"
+                echo "15- toJson(job): ${{ toJson(job) }}"
+                echo "16- toJson(steps): ${{ toJson(steps) }}"
+                echo "17- toJson(secrets): ${{ toJson(secrets) }}"
+                echo "18- toJson(runner): ${{ toJson(runner) }}"
