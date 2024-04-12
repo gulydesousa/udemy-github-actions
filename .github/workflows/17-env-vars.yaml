@@ -46,7 +46,7 @@ jobs:
 
             - name: Multiple ENV VAR
               run: |
-                DELIMITER="1234" 
+                DELIMITER=1234 
             
                 echo "RANDOM_JOKE << $DELIMITER" >> "$GITHUB_ENV"
                 echo "This is a random joke" >> "$GITHUB_ENV"
