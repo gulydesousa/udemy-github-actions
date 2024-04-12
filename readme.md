@@ -239,6 +239,19 @@ Acceso a las variables de entorno y las variables de contexto.
 [Default environment variables](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables)
 
 ## 17-vars-secrets.yaml
+Las variables pueden ir a diversos niveles:
+
+    - Organization
+    - Repository
+    - Enviroment
+
+## 18-.yaml
+
+- Descagar la herramienta [GnuPG](https://gnupg.org/download/)
+
+
+
+
 
 ## 🎁 Expresiones de Gratitud
 - Comenta a otros sobre este proyecto 📢
