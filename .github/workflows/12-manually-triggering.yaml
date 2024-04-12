@@ -29,7 +29,7 @@ on:
                 type: boolean
             environment:
                 description: "Environment"
-                type: string
+                type: environment
                 required: true
  
 jobs:
