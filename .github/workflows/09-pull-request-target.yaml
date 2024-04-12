@@ -9,8 +9,8 @@ jobs:
         
     pr-comment:
         permissions:
-            issues: read #Le quitamos el permiso de escritura, por lo que no podrá comentar y el action fallará
-            #issues: write
+            #issues: read #Le quitamos el permiso de escritura, por lo que no podrá comentar y el action fallará
+            issues: write
 
         runs-on: ubuntu-latest
         steps:
