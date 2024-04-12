@@ -1,4 +1,4 @@
-name: Environment Variables
+name: 17-Environment Variables
 
 on: [push]
 
@@ -16,4 +16,4 @@ jobs:
             # Se evalua antes de que se ejecute el job en el runner
             # Se envia al runner ya evaluado
             - name: Log Context
-              run: echo '${{ github.ref }}'' #Imprime la referencia de la rama
+              run: echo '${{ github.ref }}' #Imprime la referencia de la rama
