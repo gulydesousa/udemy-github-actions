@@ -182,6 +182,8 @@ Este workflow se ejecuta en función en caso que se ejecute determinados tipos d
 
 No usa el codigo del PR, por lo tanto, en caso que la PR venga de un fork externo no necesitará aprobación para ejecutarse.
 
+[Permissions Scope](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token)
+
 ## 10-workflow-runs.yaml
 
 Se ejecuta un workflow dependiendo de la ejecución de otro.

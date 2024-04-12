@@ -3,13 +3,29 @@ name: 09-Pull Request Target
 on:
     pull_request_target:
         types: [opened]
+
+
 jobs:
+        
     pr-comment:
+        permissions:
+            issues: read #Le quitamos el permiso de escritura, por lo que no podrá comentar y el action fallará
+            #issues: write
+
         runs-on: ubuntu-latest
         steps:
             - name: Comment on new PRs
+
+            # Esta acción permite ejecutar código de JavaScript en el contexto de la API de GitHub
+            # por detras utiliza el GitHub Token para autenticarse 
               uses: actions/github-script@v7
               with:
+                # Podemos proveer un token personalizado o usar el token de GitHub
+                # Este token se crea automaticamente para cada acción
+                # Se usa para autenticarse en el workflow
+                # Una vez que el workflow se ejecuta, el token expira
+                # 
+                github-token: ${{ secrets.GITHUB_TOKEN }}
                 # https://octokit.github.io/rest.js/v20
                 script: |
                     

@@ -1,5 +1,5 @@
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
-name: 11-Filter BY Branches Tags and Paths
+name: 11-Filter by Branches Tags and Paths
 
 on:
   push:
