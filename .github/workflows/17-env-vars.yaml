@@ -40,6 +40,9 @@ jobs:
             - name: Log Custom ENV VAR
               env:
                 STEP_ENV_VAR: "This is a custom environment variable for this step"
+                #Se pueden sobreescribir las variables de entorno globales
+                WF_ENV_VAR: "Overwritten global environment variable"
+
               run: |
                 # Imprime la variable de entorno global
                 echo $WF_ENV_VAR 
@@ -49,3 +52,5 @@ jobs:
 
                 # Imprime la variable de entorno del step
                 echo $STEP_ENV_VAR 
+            
+            
