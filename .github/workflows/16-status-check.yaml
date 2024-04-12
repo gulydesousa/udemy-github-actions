@@ -2,6 +2,7 @@ name: 16-Status Check Funcions
 
 on: [push]
 
+
 jobs:
     job-1:
         runs-on: ubuntu-latest
@@ -9,6 +10,9 @@ jobs:
         steps:
             - name: Step 1
               run: sleep 20
+
+            - name: FailStep
+              run: exit 1     
 
             - name: Runs on Failure
               if: failure() # failure() es una función que devuelve true si el job falla
