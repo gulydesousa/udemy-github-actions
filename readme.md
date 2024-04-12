@@ -213,7 +213,7 @@ Eventos externos.
 
 >  Por ejemplo:  una aplicación que en base a determinada situación, se dispara el worokflow.
 
-## 14-stañe-issues-pr.yaml
+## 14-stale-issues-pr.yaml
 
 Se marca un issue como stale según un cronometro.
 

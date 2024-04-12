@@ -3,8 +3,8 @@ name: 14-Stale Issues & PR
 on:
     schedule:
         # https://crontab.guru/
-        - cron: '0 14 * * *' # Se ejecuta cada minuto
-        - cron: '* * * * *' # Just for testing, each 5 minutes
+        #- cron: '0 14 * * *' # Se ejecuta a las 14:00
+        - cron: '* * * * *' # Se ejecuta cada minuto
 
 jobs:
     stale:
