@@ -47,7 +47,7 @@ jobs:
             - name: Multiple ENV VAR
               run: |
                 echo "RANDOM_JOKE<<EOF" >> $GITHUB_ENV
-                echo "This is a random joke" >> $GITHUB_ENV
+                echo "This is a random joke:" >> $GITHUB_ENV
                 curl -s https://api.chucknorris.io/jokes/random | jq -r '.value' >> $GITHUB_ENV
                 echo "EOF" >> $GITHUB_ENV
 
