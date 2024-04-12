@@ -46,14 +46,14 @@ jobs:
 
             - name: Multiple ENV VAR
               run: |
-                DELIMITER=";" 
+                DELIMITER="1234" 
             
-                echo "RANDOM_JOKE << $DELIMITER" >> $GITHUB_ENV
-                echo "This is a random joke" >> $GITHUB_ENV
-                curl -s https://api.chucknorris.io/jokes/random | jq -r '.value' >> $GITHUB_ENV
-                echo "" >> $GITHUB_ENV
+                echo "RANDOM_JOKE << $DELIMITER" >> "$GITHUB_ENV"
+                echo "This is a random joke" >> "$GITHUB_ENV"
+                curl -s https://api.chucknorris.io/jokes/random | jq -r '.value' >> "$GITHUB_ENV"
+                echo "" >> "$GITHUB_ENV"
                 
-                echo "$DELIMITER" >> $GITHUB_ENV
+                echo "$DELIMITER" >> "$GITHUB_ENV"
 
 
             # Variables de entorno globales para este step del job  
