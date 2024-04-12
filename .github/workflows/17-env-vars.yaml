@@ -46,7 +46,7 @@ jobs:
 
             - name: Multiple ENV VAR
               run: |
-                DELIMITER=";" # Delimitador para separar las variables de entorno
+                DELIMITER=";" 
             
                 echo "RANDOM_JOKE << $DELIMITER" >> $GITHUB_ENV
                 echo "This is a random joke" >> $GITHUB_ENV
@@ -78,6 +78,6 @@ jobs:
 
                 # Imprime la variable de entorno del step
                 echo $RANDOM_JOKE
-                
+
             
             
