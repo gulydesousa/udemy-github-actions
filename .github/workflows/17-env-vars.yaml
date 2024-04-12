@@ -44,6 +44,12 @@ jobs:
             - name: Overwrite ENV VAR
               run: echo "JOB_ENV_VAR=$RANDOM" >> $GITHUB_ENV  
 
+            # RANDOM_JOKE es una variable de entorno que se crea con un valor aleatorio
+            # Se usa para demostrar que se pueden crear variables de entorno con valores
+            # que se obtienen de comandos
+            # Además se usa para demostrar que se pueden crear variables de entorno
+            # con valores que se obtienen de comandos y que se pueden usar en otros steps
+            # y se usa el formato de heredoc para crear la variable de entorno
             - name: Multiple ENV VAR
               run: |
                 echo "RANDOM_JOKE<<EOF" >> $GITHUB_ENV
