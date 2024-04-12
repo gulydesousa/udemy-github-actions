@@ -2,9 +2,27 @@ name: 17-Environment Variables
 
 on: [push]
 
+# Variables de entorno globales a todos los jobs de este workflow
+env:
+  WF_ENV_VAR: "This is a custom environment variable"
+
 jobs:
     env-vars-and-context:
         runs-on: ubuntu-latest
+
+        #En este caso se ejecuta el job solo si la rama es main
+        # Es muy importante usar context variables en el if
+        # Las variables de entorno NO se evaluan en el if
+        if: github.ref == 'refs/heads/main'
+
+        #NO HAGAS ESTO: Las variables de entorno NO se evaluan en el if 
+        #if: $GITHUB_REF == 'refs/heads/main'
+
+        # Variables de entorno especificas para este job
+        env:
+            JOB_ENV_VAR: "This is a custom environment variable for this job"
+
+
         steps:
             # Este paso imprime las variables de entorno
             # Runner Machine Environment Variables
@@ -17,3 +35,17 @@ jobs:
             # Se envia al runner ya evaluado
             - name: Log Context
               run: echo '${{ github.ref }}' #Imprime la referencia de la rama
+
+            # Variables de entorno globales para este step del job  
+            - name: Log Custom ENV VAR
+              env:
+                STEP_ENV_VAR: "This is a custom environment variable for this step"
+              run: |
+                # Imprime la variable de entorno global
+                echo $WF_ENV_VAR 
+                
+                # Imprime la variable de entorno del job
+                echo $JOB_ENV_VAR 
+
+                # Imprime la variable de entorno del step
+                echo $STEP_ENV_VAR 

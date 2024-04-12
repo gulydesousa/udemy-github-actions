@@ -230,7 +230,11 @@ Se usa para saber como ha terminado workflow para saber que acción tomar a cont
 
 ## 17-env-vars.yaml
 
-Acceso a las variables de entorno.
+Acceso a las variables de entorno y las variables de contexto.
+
+- Variables de entorno se evaluan en el runner machine `$GITHUB_REF`
+
+- Variables de contexto se envían ya evaluadas `github.ref `
 
 [Default environment variables](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables)
 
