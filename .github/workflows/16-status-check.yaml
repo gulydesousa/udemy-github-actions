@@ -15,7 +15,7 @@ jobs:
               run: exit 1  
               
             - name: Runs on Step 11 Failure
-              if: steps.step-11.conclusion == 'failure' # se ejecuta solo si el paso 11 falla
+              if: failure() && steps.step-11.conclusion == 'failure' # se ejecuta solo si el paso 11 falla
               run: echo "This job runs only on step 11 failure"
 
             - name: Runs on Failure
