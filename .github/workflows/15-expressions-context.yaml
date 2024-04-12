@@ -1,0 +1,36 @@
+name: 15-Expressions & Context
+
+on: [push, pull_request, issues, workflow_dispatch]
+
+# https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions
+# @${{ github.actor }}: Menciona al usuario que ejecutó la acción   
+
+# @${{}} significa que se está utilizando una expresión
+# ${{}} significa que se está utilizando una variable de contexto
+
+run-name: "Expresions & Context by @${{ github.actor }}, event: ${{ github.event_name }}"
+
+jobs:
+    using-expressions-and-contexts:
+        runs-on: ubuntu-latest
+        steps:
+            # Ejemplo de como se pueden utilizar expresiones y literales
+            - name: Expressiones
+              run: |
+                echo "1- Literal int: ${{ 1 }}"
+                echo "2- Literal string: ${{ 'Hello, World!' }}"
+                echo "3- Literal boolean: ${{ true }}"
+                echo "6- Literal null: ${{ null }}"
+                echo "7- Literal expression: ${{ 1>2 }}"
+                echo "8- Literal expression: ${{ 'string' == 'String' }}"
+                echo "9- Literal expression: ${{ true && false }}"
+                echo "10- Literal expression: ${{ true || (false && true) }}"
+
+             # Ejemplo de como se puede utilizar el contexto de GitHub Actions   
+            - name: Contexts
+              run: |
+                echo "11- toJson(github): ${{ toJson(github) }}"
+                echo "12- toJson(job): ${{ toJson(job) }}"
+                echo "13- toJson(steps): ${{ toJson(steps) }}"
+                echo "14- toJson(secrets): ${{ toJson(secrets) }}"
+                echo "15- toJson(runner): ${{ toJson(runner) }}"
