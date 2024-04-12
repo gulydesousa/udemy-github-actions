@@ -36,6 +36,17 @@ jobs:
             - name: Log Context
               run: echo '${{ github.ref }}' #Imprime la referencia de la rama
 
+
+            - name: Set ENV VAR
+            # Esto lo que hace es añadir una variable de entorno al runner
+              run: echo "NEW_ENV_VAR=$(date)" >> $GITHUB_ENV    
+            # Podemos sobre escribir las variables de entorno
+            - name: Overwrite ENV VAR
+              run: echo "JOB_ENV_VAR=$RANDOM" >> $GITHUB_ENV  
+
+
+
+
             # Variables de entorno globales para este step del job  
             - name: Log Custom ENV VAR
               env:
@@ -52,5 +63,8 @@ jobs:
 
                 # Imprime la variable de entorno del step
                 echo $STEP_ENV_VAR 
+
+                # Imprime la variable de entorno del step
+                echo $NEW_ENV_VAR
             
             
