@@ -228,6 +228,13 @@ Se usan [expresiones junto con if keys](https://docs.github.com/en/actions/learn
 
 Se usa para saber como ha terminado workflow para saber que acción tomar a continuación.
 
+## 17-env-vars.yaml
+
+Acceso a las variables de entorno.
+
+[Default environment variables](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables)
+
+
 
 ## 🎁 Expresiones de Gratitud
 - Comenta a otros sobre este proyecto 📢

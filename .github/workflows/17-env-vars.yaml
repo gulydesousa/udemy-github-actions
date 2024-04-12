@@ -1,0 +1,19 @@
+name: Environment Variables
+
+on: [push]
+
+jobs:
+    env-vars-and-context:
+        runs-on: ubuntu-latest
+        steps:
+            # Este paso imprime las variables de entorno
+            # Runner Machine Environment Variables
+            - name: Log ENV VAR
+              run: echo $GITHUB_REF # Imprime la referencia de la rama
+            
+            # Este paso imprime el contexto de GitHub Actions
+            # Enviado al runner por GitHub Actions
+            # Se evalua antes de que se ejecute el job en el runner
+            # Se envia al runner ya evaluado
+            - name: Log Context
+              run: echo '${{ github.ref }}'' #Imprime la referencia de la rama
