@@ -8,11 +8,17 @@ on: [push, pull_request, issues, workflow_dispatch]
 # @${{}} significa que se está utilizando una expresión
 # ${{}} significa que se está utilizando una variable de contexto
 
+#Titulo dinamico para la ejecución
 run-name: "Expresions & Context by @${{ github.actor }}, event: ${{ github.event_name }}"
 
 jobs:
     using-expressions-and-contexts:
         runs-on: ubuntu-latest
+
+        # se ejecuta el job solo si el evento es un push
+        # fijate que no hace falta los {} para la expresión if
+        if: github.event_name == 'push'
+        
         steps:
             # Ejemplo de como se pueden utilizar expresiones y literales
             - name: Expressiones
