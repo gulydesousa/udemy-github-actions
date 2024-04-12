@@ -44,7 +44,16 @@ jobs:
             - name: Overwrite ENV VAR
               run: echo "JOB_ENV_VAR=$RANDOM" >> $GITHUB_ENV  
 
-
+            - name: Multiple ENV VAR
+              run: |
+                DELIMITER=";" # Delimitador para separar las variables de entorno
+            
+                echo "RANDOM_JOKE << $DELIMITER" >> $GITHUB_ENV
+                echo "This is a random joke" >> $GITHUB_ENV
+                curl -s https://api.chucknorris.io/jokes/random | jq -r '.value' >> $GITHUB_ENV
+                echo "" >> $GITHUB_ENV
+                
+                echo "$DELIMITER" >> $GITHUB_ENV
 
 
             # Variables de entorno globales para este step del job  
@@ -66,5 +75,9 @@ jobs:
 
                 # Imprime la variable de entorno del step
                 echo $NEW_ENV_VAR
+
+                # Imprime la variable de entorno del step
+                echo $RANDOM_JOKE
+                
             
             
