@@ -220,6 +220,15 @@ Se marca un issue como stale según un cronometro.
 > [Crontab.guru](https://crontab.guru/) - The cron schedule expression generator
 
 
+## 15-expressions-context.yaml
+
+Se usan [expresiones junto con if keys](https://docs.github.com/en/actions/learn-github-actions/expressions#functions) 
+
+## 16-status-check.yaml
+
+Se usa para saber como ha terminado workflow para saber que acción tomar a continuación.
+
+
 ## 🎁 Expresiones de Gratitud
 - Comenta a otros sobre este proyecto 📢
 - Da las gracias públicamente 🤓.

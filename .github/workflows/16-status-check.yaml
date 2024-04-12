@@ -1,0 +1,38 @@
+name: 16-Status Check Funcions
+
+on: [push]
+
+jobs:
+    job-1:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Step 1
+              run: sleep 20
+
+            - name: Runs on Failure
+              if: failure() # failure() es una función que devuelve true si el job falla
+              run: echo "This job runs only on failure"
+
+            - name: Runs on Success
+              if: success() # success() es una función que devuelve true si el job tiene éxito
+              run: echo "This job runs only on success"
+
+            - name: Always Runs
+              if: always() # always() es una función que siempre devuelve true
+              run: echo "This job always runs"
+
+            - name: Runs on Cancel
+              if: cancelled() # cancelled() es una función que devuelve true si el job es cancelado
+              run: echo "This job runs only on cancel"  
+
+    job-2:
+        # se ejecuta solo si el job-1 falla
+        runs-on: ubuntu-latest
+
+        needs: job-1 # job-2 necesita que job-1 se ejecute primero
+
+        if: failure() # se ejecuta solo si job-1 falla
+        steps:
+            - name: Step 1
+              run: echo "Job-2"
