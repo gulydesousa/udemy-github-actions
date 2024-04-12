@@ -238,14 +238,14 @@ Acceso a las variables de entorno y las variables de contexto.
 
 [Default environment variables](https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables)
 
-## 17-vars-secrets.yaml
+## 18-vars-secrets.yaml
 Las variables pueden ir a diversos niveles:
 
     - Organization
     - Repository
     - Enviroment
 
-## 18-.yaml
+Tambien vemos como encriptar y desencriptar en nuestro wf con gpg
 
 - Descagar la herramienta [GnuPG](https://gnupg.org/download/)
 
