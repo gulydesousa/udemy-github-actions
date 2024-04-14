@@ -66,16 +66,34 @@ git clone git@github.com:gulydesousa/udemy-github-actions.git
 
 Esta autenticacion requiere una clave **SSH** que vamos a generar
 
+> Dejaremos el SSH en la ruta `C:\Users\guly.desousa\.ssh`
+
 ```sh
 ssh-keygen -t rsa 
-Enter file in which to save the key (C:\Users\guly.desousa/.ssh/id_rsa): c:\users\guly.desousa\.ssh\github-alt_id_rsa
-#Copiamos la clave publica
-cat c:\users\guly.desousa\.ssh\github-alt_id_rsa.pub
+
+Enter file in which to save the key (/c/Users/guly.desousa/.ssh/id_rsa): /c/users/guly.desousa/.ssh/alt-github_id_rsa
+
+# Copiamos la clave publica en el github
+cat /c/users/guly.desousa/.ssh/alt-github_id_rsa.pub
+
 ```
 
 Creamos la SSH desde `(user)/settings/SSH and GPG keys`
 
 ![alt text](images/ssh.png)
+
+Comprobar que tenemos acceso por **SSH**
+```sh
+ssh -T git@github.com
+
+# Arrancamos el agente ssh
+eval $(ssh-agent -s)
+
+# Agregamos la clave privada
+ssh-add /c/users/guly.desousa/.ssh/alt-github_id_rsa
+```
+
+Ya nos deja hacer el push
 
 ### GitHub CLI
 
