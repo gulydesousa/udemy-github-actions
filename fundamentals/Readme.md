@@ -38,10 +38,18 @@ git clone https://github.com/seawaving/udemy-github-actions.git
 ```
 
 ### HTTP
+Este tipo de autenticación requiere un token.
 
+Creamos el token desde `(user)/settings/<Developer Settings>/Personal Access Tokens/Fine-grained tokens`
 
+Asignamos solo los permisos necesarios
+- **Commit statuses** (Read-Write)
+- **Contents** (Read-Write)
+
+Generamos y copiamos el token, es ese valor el que usaremos para hacer push cuando nos pida un password.
 
 ### SSH
+Esta autenticacion requiere una clave ssh
 
 
 ### GitHub CLI
@@ -132,7 +140,7 @@ git commit -m "informacion del cambio"
 `git log` muestra información de los logs recientes
 
 
-# Push
+## Push
 
 Para subir los cambios al repositorio remoto de origen
 
