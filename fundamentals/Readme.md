@@ -38,7 +38,11 @@ git clone https://github.com/seawaving/udemy-github-actions.git
 ```
 
 ### HTTP
-> Venimos de clonar por HTTP
+> Venimos de clonar por **HTTP**
+
+```sh
+git clone https://github.com/seawaving/udemy-github-actions.git
+```
 
 Este tipo de autenticación requiere un token.
 
@@ -53,7 +57,15 @@ Generamos y copiamos el token, es ese valor el que usaremos para hacer push cuan
 ### SSH
 > Venimos de clonar con **SSH**
 
-Esta autenticacion requiere una clave ssh
+Si el repositorio es privado, la credencial debería estar ya seteada para poder bajar el repositorio.
+Este es publico, por lo que la credencial la vamos a necesitar para hacer push solamente.
+
+```sh
+git clone git@github.com:gulydesousa/udemy-github-actions.git
+```
+
+Esta autenticacion requiere una clave **SSH**
+
 
 
 ### GitHub CLI
