@@ -64,9 +64,18 @@ Este es publico, por lo que la credencial la vamos a necesitar para hacer push s
 git clone git@github.com:gulydesousa/udemy-github-actions.git
 ```
 
-Esta autenticacion requiere una clave **SSH**
+Esta autenticacion requiere una clave **SSH** que vamos a generar
 
+```sh
+ssh-keygen -t rsa 
+Enter file in which to save the key (C:\Users\guly.desousa/.ssh/id_rsa): c:\users\guly.desousa\.ssh\github-alt_id_rsa
+#Copiamos la clave publica
+cat c:\users\guly.desousa\.ssh\github-alt_id_rsa.pub
+```
 
+Creamos la SSH desde `(user)/settings/SSH and GPG keys`
+
+![alt text](images/ssh.png)
 
 ### GitHub CLI
 
