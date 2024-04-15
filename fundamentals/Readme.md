@@ -97,10 +97,15 @@ Ya nos deja hacer el push
 
 ### GitHub CLI
 
+- Instalar el CLI
 
+```sh
+ gh --version
 
+ gh clonning
 
-
+ gh logging
+```
 
 ### Clonning en el codespace
 
