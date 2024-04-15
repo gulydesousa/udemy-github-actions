@@ -247,4 +247,30 @@ git fetch
 
 ## Stashes
 
+El comando git stash en Git se utiliza para guardar temporalmente cambios que has hecho pero que no quieres commit aún, de modo que puedas cambiar a otra rama. 
+
+Los cambios que guardas con git stash se pueden aplicar más tarde cuando estés listo.
+
+
+```sh
+# Ver los cambios guardados
+git stash list
+# Guardar tus cambios
+git stash
+# Guardar tus cambios con un nombre
+git stash save my-name
+# Aplica los ultimos cambios
+git stash apply
+#Aplica los cambios guardados más recientemente con git stash y luego los elimina de tu lista de cambios guardados
+git stash pop
+```
+
 ## Merging
+
+```sh
+#Nos pasamos a la rama develop
+git checkout develop
+
+# Intentará fusionar los cambios de la rama main en tu rama develop
+git merge main
+```
