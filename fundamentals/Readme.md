@@ -96,6 +96,17 @@ ssh-add /c/users/guly.desousa/.ssh/alt-github_id_rsa
 Ya nos deja hacer el push
 
 
+### Otra forma de usar ssh-keygen
+
+```sh
+ssh-keygen -t ed25519
+cat /c/Users/guly.desousa/.ssh/id_ed25519.pub
+```
+
+Este comando nos deja el archivo directamente en el directorio `.ssh`
+
+> `Your identification has been saved in /c/Users/guly.desousa/.ssh/id_ed25519`
+
 ## SSH desde el CLI
 
 Nos guia paso a paso para crear el SSH y nos crea el SSH el nuestra cuenta.
