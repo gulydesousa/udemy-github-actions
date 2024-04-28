@@ -251,11 +251,3 @@ Tambien vemos como encriptar y desencriptar en nuestro wf con gpg
 
 - Descagar la herramienta [GnuPG](https://gnupg.org/download/)
 
-
-
-
-
-## 🎁 Expresiones de Gratitud
-- Comenta a otros sobre este proyecto 📢
-- Da las gracias públicamente 🤓.
-- etc.
